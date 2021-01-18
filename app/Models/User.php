@@ -25,7 +25,8 @@ class User extends Authenticatable
         'credit',
         'visit_number',
         'last_visit',
-        'group_id'
+        'group_id',
+        'image_link'
     ];
 
     /**

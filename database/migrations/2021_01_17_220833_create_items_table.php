@@ -17,9 +17,9 @@ class CreateItemsTable extends Migration
             $table->id();
             $table->integer('product_id');
             $table->integer('order_id');
-            $table->integer('price');
-            $table->integer('quantity');
-            $table->integer('total');
+            $table->integer('price')->default('0');
+            $table->integer('quantity')->default('0');
+            $table->integer('total')->default('0');
             $table->timestamps();
         });
     }
