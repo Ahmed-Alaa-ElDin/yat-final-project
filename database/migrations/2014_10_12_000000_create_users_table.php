@@ -21,11 +21,12 @@ class CreateUsersTable extends Migration
             $table->string('email',50)->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('phone',20);
+            $table->integer('gender')->default('1')->comment = '1 -> Male , 2 -> Female';
             $table->integer('credit')->default('0');
             $table->integer('visit_number')->default('0');
             $table->dateTime('last_visit')->useCurrent();
             $table->integer('group_id')->default('1');
-            $table->integer('image_link')->nullable();
+            $table->text('profile_photo_url',255)->default('images/default_vector.jpg');
             $table->rememberToken();
             $table->timestamps();
         });

@@ -17,7 +17,7 @@ class CreateOrdersTable extends Migration
             $table->id();
             $table->integer('user_id');
             $table->integer('address_id');
-            $table->integer('total_price');
+            $table->integer('total_price')->default('0');
             $table->timestamps();
         });
     }
