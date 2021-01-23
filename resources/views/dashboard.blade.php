@@ -71,7 +71,7 @@
             <div class="icon">
               <i class="fa fa-pills fa-sm"></i>
             </div>
-            <a href="#" class="small-box-footer"> More info <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="{{route('products.view')}}" class="small-box-footer"> More info <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->
@@ -81,7 +81,7 @@
             <div class="inner">
               <h3>{{$total_visits_num}}</h3>
 
-              <p><b>Visitors</b></p>
+              <p><b>Visits</b></p>
             </div>
             <div class="icon">
               <i class="ion ion-stats-bars"></i>

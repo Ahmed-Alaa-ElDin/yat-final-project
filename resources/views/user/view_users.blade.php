@@ -40,12 +40,12 @@
         <table id="users_datatable" class="table text-center table-striped table-bordered" style="width:100%">
             <thead>
                 <tr class="bg-warning">
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>Phone</th>
-                    <th>Visits Number</th>
-                    <th>Role</th>
-                    <th>More</th>
+                    <th class="align-middle">Name</th>
+                    <th class="align-middle">Email</th>
+                    <th class="align-middle">Phone</th>
+                    <th class="align-middle">Visits Number</th>
+                    <th class="align-middle">Role</th>
+                    <th class="align-middle">More</th>
                 </tr>
             </thead>
             
@@ -153,13 +153,15 @@
                 <br>
             </div>
             <div class="modal-footer">
-                <form action="{{route('user.delete')}}" method="POST">
+                <form action="{{route('user.delete')}}" class="w-100" method="POST">
                     @csrf
                     @method('DELETE')
                     <input type="hidden" name="id" id="confirmID">
-                    <button type="submit" class="btn btn-success font-weight-bold px-4 py-1 m-auto" id="confirmDeleteButton">Yes</button>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-success font-weight-bold px-4 py-1 my-auto mx-2" id="confirmDeleteButton">Yes</button>
+                        <button type="button" class="btn btn-danger font-weight-bold px-4 py-1 my-auto mx-2" id="confirmDismiss" data-dismiss="modal">No</button>
+                    </div>
                 </form>
-                <button type="button" class="btn btn-danger font-weight-bold px-4 py-1 m-auto" id="confirmDismiss" data-dismiss="modal">No</button>
             </div>
             </div>
         </div>

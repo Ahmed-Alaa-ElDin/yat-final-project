@@ -25,8 +25,8 @@ class CreateUsersTable extends Migration
             $table->integer('credit')->default('0');
             $table->integer('visit_number')->default('0');
             $table->dateTime('last_visit')->useCurrent();
-            $table->integer('group_id')->default('1');
-            $table->text('profile_photo_url',255)->default('images/default_vector.jpg');
+            $table->foreignId('group_id')->default('1')->constrained('groups')->onUpdate('cascade')->onDelete('cascade');
+            $table->string('profile_photo_url',255)->default('images/default_vector.jpg')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

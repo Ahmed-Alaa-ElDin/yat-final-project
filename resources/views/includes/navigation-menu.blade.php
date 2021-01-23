@@ -68,11 +68,11 @@
           <ul class=" treeview-menu">
             <li class="@yield("user")"><a href="{{route('user.form')}}"><i class="fa fa-user fa-fw"></i> User</a></li>
             <li class="@yield("order")"><a href=""><i class="fa fa-shopping-cart fa-fw"></i> Order</a></li>
-            <li class="@yield("category")"><a href=""><i class="fa fa-sitemap fa-fw"></i> Category</a></li>
-            <li class="@yield("product")"><a href=""><i class="fa fa-pills fa-fw"></i> Product</a></li>
-            <li class="@yield("country")"><a href=""><i class="fa fa-globe-africa fa-fw"></i> Country</a></li>
-            <li class="@yield("city")"><a href=""><i class="fa fa-city fa-fw"></i> City</a></li>
-            <li class="@yield("state")"><a href=""><i class="fa fa-building fa-fw"></i> State</a></li>
+            <li class="@yield("category")"><a href="{{route('category.form')}}"><i class="fa fa-sitemap fa-fw"></i> Category</a></li>
+            <li class="@yield("product")"><a href="{{route('product.form')}}"><i class="fa fa-pills fa-fw"></i> Product</a></li>
+            <li class="@yield("country")"><a href="{{route('country.form')}}"><i class="fa fa-globe-africa fa-fw"></i> Country</a></li>
+            <li class="@yield("city")"><a href="{{route('city.form')}}"><i class="fa fa-city fa-fw"></i> City</a></li>
+            <li class="@yield("state")"><a href="{{route('state.form')}}"><i class="fa fa-building fa-fw"></i> State</a></li>
           </ul>
         </li>
         <li class="treeview @yield("view")">
@@ -83,13 +83,13 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li class="@yield("view-user")"><a href="{{route('users.view')}}"><i class="fa fa-user fa-fw"></i> User</a></li>
-            <li class="@yield("view-order")"><a href=""><i class="fa fa-shopping-cart fa-fw"></i> Order</a></li>
-            <li class="@yield("view-category")"><a href=""><i class="fa fa-sitemap fa-fw"></i> Category</a></li>
-            <li class="@yield("view-product")"><a href=""><i class="fa fa-pills fa-fw"></i> Product</a></li>
-            <li class="@yield("view-country")"><a href=""><i class="fa fa-globe-africa fa-fw"></i> Country</a></li>
-            <li class="@yield("view-city")"><a href=""><i class="fa fa-city fa-fw"></i> City</a></li>
-            <li class="@yield("view-state")"><a href=""><i class="fa fa-building fa-fw"></i> State</a></li>
+            <li class="@yield("view-user")"><a href="{{route('users.view')}}"><i class="fa fa-user fa-fw"></i> Users</a></li>
+            <li class="@yield("view-order")"><a href=""><i class="fa fa-shopping-cart fa-fw"></i> Orders</a></li>
+            <li class="@yield("view-category")"><a href="{{route('categories.view')}}"><i class="fa fa-sitemap fa-fw"></i> Categories</a></li>
+            <li class="@yield("view-product")"><a href="{{route('products.view')}}"><i class="fa fa-pills fa-fw"></i> Products</a></li>
+            <li class="@yield("view-country")"><a href="{{route('countries.view')}}"><i class="fa fa-globe-africa fa-fw"></i> Countries</a></li>
+            <li class="@yield("view-city")"><a href="{{route('cities.view')}}"><i class="fa fa-city fa-fw"></i> Cities</a></li>
+            <li class="@yield("view-state")"><a href="{{route('states.view')}}"><i class="fa fa-building fa-fw"></i> States</a></li>
           </ul>
         </li>
       </ul>

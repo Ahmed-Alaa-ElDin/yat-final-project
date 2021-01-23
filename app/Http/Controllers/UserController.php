@@ -11,7 +11,7 @@ use App\Models\User;
 
 class UserController extends Controller
 {
-    public function index()
+    public function new_user()
     {
         return view('user.new_user_form');
     }
@@ -44,7 +44,7 @@ class UserController extends Controller
 
 
         // Add to Database
-        $user = User::create([
+        User::create([
             'first_name'            =>      $request->first_name,
             'last_name'             =>      $request->last_name,
             'email'                 =>      $request->email,
