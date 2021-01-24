@@ -44,7 +44,7 @@
                 <div class="form-group col-lg-6 row">
                     <div class="col-lg-4">
                         <div class="input-group">
-                            <input id="male" type="radio" name="gender" value="1" @if (old('gender') == '1') checked @endif>
+                            <input id="male" type="radio" name="gender" value="1" @if (old('gender') != '2') checked @endif>
                             <x-jet-label for="male" value="Male" style="display:inline-block;" class="ml-2 mt-1"/>
                         </div>
                     </div>

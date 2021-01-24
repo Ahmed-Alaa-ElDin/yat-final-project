@@ -18,6 +18,7 @@ class CreateOrdersTable extends Migration
             $table->foreignId('user_id')->constrained('users')->onUpdate('cascade')->onDelete('cascade');;
             $table->foreignId('address_id')->constrained('addresses')->onUpdate('cascade')->onDelete('cascade');;
             $table->integer('total_price')->default('0');
+            $table->integer('status')->default('0');
             $table->timestamps();
         });
     }

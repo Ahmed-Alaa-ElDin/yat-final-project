@@ -96,20 +96,21 @@ class UserController extends Controller
             'phone'         =>       ['required','numeric'],
             'gender'        =>       ['required'],
         ])->validate();   
-
+        
+        
         // Save Image
         if ($request->new_image != null) {
             $req_image = $request->file('new_image');
-
+            
             $image = rand().'.'.$req_image->getClientOriginalExtension();
-
+            
             $req_image->move(public_path('images'), $image);
         } else {
             $image = 'default_vector.jpg';
         }
-
+        
         // Updating
-
+        
         $user->update([
             'first_name'            =>       $request->first_name,
             'last_name'             =>       $request->last_name,
@@ -119,7 +120,7 @@ class UserController extends Controller
             'group_id'              =>       $request->role,
             'profile_photo_url'     =>       'images/'.$image
         ]);
-
+            
         return redirect()->route('users.view')->with('message', 'User Data Updated Successfully')->with('message_type','good');
     }
 

@@ -67,7 +67,7 @@
           </a>
           <ul class=" treeview-menu">
             <li class="@yield("user")"><a href="{{route('user.form')}}"><i class="fa fa-user fa-fw"></i> User</a></li>
-            <li class="@yield("order")"><a href=""><i class="fa fa-shopping-cart fa-fw"></i> Order</a></li>
+            <li class="@yield("order")"><a href="{{route('order.form')}}"><i class="fa fa-shopping-cart fa-fw"></i> Order</a></li>
             <li class="@yield("category")"><a href="{{route('category.form')}}"><i class="fa fa-sitemap fa-fw"></i> Category</a></li>
             <li class="@yield("product")"><a href="{{route('product.form')}}"><i class="fa fa-pills fa-fw"></i> Product</a></li>
             <li class="@yield("country")"><a href="{{route('country.form')}}"><i class="fa fa-globe-africa fa-fw"></i> Country</a></li>

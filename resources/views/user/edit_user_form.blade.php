@@ -52,7 +52,7 @@
                 <input type="hidden" name='id' value="{{old('id',$user->id)}}">
                 
                 {{-- image Input --}}
-                <input type="file" id="image" name='new_image' class="d-none">
+                <input type="file" id="image" name='new_image' class="d-none" value="{{old('new_image',$user->profile_photo_url)}}">
                 
                 <div class="box-body">
                     <div class="row m-0">

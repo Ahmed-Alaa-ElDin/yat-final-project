@@ -53,7 +53,7 @@
 
                     <tr>
                         <td class="align-middle">{{$product->name}}</td>
-                        <td class="align-middle">{{$product->price}}</td>
+                        <td class="align-middle">{{$product->price}} EGP</td>
                         <td class="align-middle">{{$product->quantity}}</td>
                         <td class="align-middle">{{$product->category->name}}</td>
                         <td>

@@ -74,6 +74,18 @@ Route::middleware('auth')->group(function (){
     Route::get('/states/{id?}','StateController@edit_state')->name('state.edit');
     Route::post('/states','StateController@save_edit_state')->name('state.edit.save');
     Route::delete('/states','StateController@delete_state')->name('state.delete');
+
+    // Orders Routes
+    Route::get('/new_order','OrderController@new_order')->name('order.form');
+    Route::get('/get_user_address','OrderController@get_address')->name('address.get');
+    Route::get('/get_country_cities','OrderController@get_cities')->name('city.get');
+    Route::get('/get_city_states','OrderController@get_states')->name('state.get');
+    Route::post('/add_items','OrderController@save_address_order')->name('address.create');
+    Route::post('/create_item','OrderController@save_item')->name('item.create');
+    Route::delete('/create_item','OrderController@delete_item')->name('item.delete');
+    Route::delete('/delete_order','OrderController@delete_order')->name('order.delete');
+    Route::patch('/save_order','OrderController@save_order')->name('order.save');
+
 });
 
 require __DIR__.'/auth.php';

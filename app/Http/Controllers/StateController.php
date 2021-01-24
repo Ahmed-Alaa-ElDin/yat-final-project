@@ -66,13 +66,13 @@ class StateController extends Controller
         // Validation 
         Validator::make($request->all(), [
             'name'          =>       ['required','string','max:20'],
-            'city'       =>       ['required'],
+            'city'          =>       ['required'],
         ])->validate();   
 
         // Updating
         $state->update([
             'name'            =>      $request->name,
-            'city_id'      =>      $request->city,
+            'city_id'         =>      $request->city,
         ]);
 
         return redirect()->route('states.view')->with('message', 'State Data Updated Successfully')->with('message_type','good');
