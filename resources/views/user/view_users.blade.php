@@ -195,7 +195,7 @@
                         $('#verified').text("(Not verified)");
                     }
                     $('#new_phone').text(res.user.phone);
-                    $('#new_gender').text(res.user.gender);
+                    $('#new_gender').text(res.user.gender == '1' ? 'Male' : 'Female');
                     $('#new_credit').text(res.user.credit + ' EGP');
                     $('#new_visit_number').text(res.user.visit_number);
                     $('#new_last_visit').text(visited);

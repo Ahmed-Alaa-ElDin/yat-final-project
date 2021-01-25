@@ -37,9 +37,8 @@
   </script>
   <!-- Bootstrap 4 -->
   <script src="{{asset('bower_components/bootstrap/dist/js/bootstrap.min.js')}}"></script>
-  <!-- Morris.js charts -->
-  <script src="{{asset('bower_components/raphael/raphael.min.js')}}"></script>
-  <script src="{{asset('bower_components/morris.js/morris.min.js')}}"></script>
+  <!-- ChartJS -->
+  <script src="{{asset('bower_components/chart.js/Chart.min.js')}}"></script>
   <!-- Sparkline -->
   <script src="{{asset('bower_components/jquery-sparkline/dist/jquery.sparkline.min.js')}}"></script>
   <!-- jvectormap -->
