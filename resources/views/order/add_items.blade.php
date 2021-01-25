@@ -78,9 +78,9 @@
                                 <td class="align-middle"><span class="totalPrice">0</span> EGP</td>
                                 <td class="align-middle">{{$product->category->name}}</td>
                                 <td>
-                                    <button type="button" class="btn btn-info font-weight-bold productDetailsButton my-2" data-id="{{$product->id}}" data-toggle="modal" data-target="#detailsModal">Details</button>
-                                    <button type="button" class="btn btn-success font-weight-bold addButton my-2" data-id="{{$product->id}}" disabled>Add TO Order</button>
-                                    <button type="button" class="btn btn-danger font-weight-bold deleteButton my-2 d-none">Remove From Order</button>
+                                    <button type="button" class="btn btn-sm btn-info font-weight-bold productDetailsButton my-2" data-id="{{$product->id}}" data-toggle="modal" data-target="#detailsModal">Details</button>
+                                    <button type="button" class="btn btn-sm btn-success font-weight-bold addButton my-2" data-id="{{$product->id}}" disabled>Add TO Order</button>
+                                    <button type="button" class="btn btn-sm btn-danger font-weight-bold deleteButton my-2 d-none">Remove From Order</button>
                                 </td>
                             </tr>
                         @endforeach

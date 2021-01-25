@@ -146,7 +146,7 @@
             }
         })
 
-        // get cities of selectes country
+        // get cities of selected country
         $('#country').on('change', function () {
             $('#state').parent().addClass('d-none');
             $('#city,#state').empty();
@@ -172,7 +172,7 @@
             }
         })
 
-        // get states of selectes city
+        // get states of selected city
         $('#city').on('change', function () {
             $('#state').empty();
             $('#state').append(`<option value="">Select State</option>`);

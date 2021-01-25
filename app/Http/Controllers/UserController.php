@@ -106,7 +106,11 @@ class UserController extends Controller
             
             $req_image->move(public_path('images'), $image);
         } else {
-            $image = 'default_vector.jpg';
+            if ($request->old_image != null) {
+                $image = explode("/", $request->old_image)[1];
+            } else {
+                $image = 'default_vector.jpg';
+            }
         }
         
         // Updating

@@ -51,8 +51,11 @@
                 {{-- id  --}}
                 <input type="hidden" name='id' value="{{old('id',$user->id)}}">
                 
-                {{-- image Input --}}
-                <input type="file" id="image" name='new_image' class="d-none" value="{{old('new_image',$user->profile_photo_url)}}">
+                {{-- old image Input --}}
+                <input type="hidden" id="old_image" name='old_image' value="{{old('old_image',$user->profile_photo_url)}}">
+                
+                {{-- new image Input --}}
+                <input type="file" id="image" name='new_image' class="d-none" value="{{old('new_image')}}">
                 
                 <div class="box-body">
                     <div class="row m-0">
@@ -162,7 +165,7 @@
         })
 
         $("#delete_image").on('click',function () {
-            $("#image").val("");
+            $("#image , #old_image").val("");
             $.ajax({
                 method: "PATCH",
                 url: '{{route("user.photo.delete")}}' ,

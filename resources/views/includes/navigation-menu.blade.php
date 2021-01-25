@@ -84,7 +84,7 @@
           </a>
           <ul class="treeview-menu">
             <li class="@yield("view-user")"><a href="{{route('users.view')}}"><i class="fa fa-user fa-fw"></i> Users</a></li>
-            <li class="@yield("view-order")"><a href=""><i class="fa fa-shopping-cart fa-fw"></i> Orders</a></li>
+            <li class="@yield("view-order")"><a href="{{route('orders.view')}}"><i class="fa fa-shopping-cart fa-fw"></i> Orders</a></li>
             <li class="@yield("view-category")"><a href="{{route('categories.view')}}"><i class="fa fa-sitemap fa-fw"></i> Categories</a></li>
             <li class="@yield("view-product")"><a href="{{route('products.view')}}"><i class="fa fa-pills fa-fw"></i> Products</a></li>
             <li class="@yield("view-country")"><a href="{{route('countries.view')}}"><i class="fa fa-globe-africa fa-fw"></i> Countries</a></li>

@@ -85,6 +85,10 @@ Route::middleware('auth')->group(function (){
     Route::delete('/create_item','OrderController@delete_item')->name('item.delete');
     Route::delete('/delete_order','OrderController@delete_order')->name('order.delete');
     Route::patch('/save_order','OrderController@save_order')->name('order.save');
+    Route::get('/orders','OrderController@view_orders')->name('orders.view');
+    Route::get('/get_order','OrderController@view_order')->name('order.view');
+    Route::delete('/delete_one_order','OrderController@delete_one_order')->name('order.view.delete');
+
 
 });
 

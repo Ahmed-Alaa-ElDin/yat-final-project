@@ -119,6 +119,14 @@ class OrderController extends Controller
         return response()->json(['message' => 'Success']);
     }
 
+    public function delete_one_order(Request $request)
+    {
+        Order::find($request->order_id)->delete();
+
+        return $this->view_orders();
+
+    }
+
     public function save_order(Request $request)
     {
         Order::find($request->order_id)->update([
@@ -127,5 +135,36 @@ class OrderController extends Controller
         ]);
 
         return response()->json(['message' => 'Success']);
+    }
+
+    public function view_orders()
+    {
+        $orders = Order::with('user')->with('address')->with('items')->get();
+        $addresses = Address::with('country')->with('city')->with('state')->get();
+        
+        return view('order.view_orders', compact('orders','addresses'));
+    }
+
+    public function view_order(Request $request)
+    {
+
+        $order = Order::with('user')->with('address')->with('items')->find($request->id);
+
+        $address = Address::with('country')->with('city')->with('state')->find($order->address_id);
+        
+        $items = [];
+
+        foreach ($order->items as $item) {
+            $item_details = Item::with('product')->find($item->id);
+            $my_item = [
+                'product' => $item_details->product->name,
+                'unit_price' => $item_details->price,
+                'quantity' => $item_details->quantity,
+                'total_price' => $item_details->total
+            ];
+            array_push($items,$my_item);
+        }
+
+        return response()->json(['order' => $order, 'address' => $address, 'items' => $items]);
     }
 }
